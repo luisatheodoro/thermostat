@@ -40,5 +40,18 @@ describe('Thermostat', function() {
             thermostat.setPowerSavingOff();
             expect(thermostat.isPowerSaving).toEqual(false);
         });
+
+        it('Change maximum temperature to 25 when power saving is on', function() {
+            thermostat.setPowerSavingOff();
+            thermostat.setPowerSavingOn();
+            expect(thermostat.maxTemperature).toEqual(25);
+        });
+
+        it('Change isPowerSaving to true', function () {
+            thermostat.setPowerSavingOff();
+            thermostat.setPowerSavingOn();
+            expect(thermostat.isPowerSaving).toEqual(true);
+        });
+
     });
 });
