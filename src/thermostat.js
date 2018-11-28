@@ -5,3 +5,7 @@ var Thermostat = function () {
 Thermostat.prototype.changeDefaultTemperature = function(temperature) {
     this.temperature = temperature;
 };
+
+Thermostat.prototype.increaseTemperature = function() {
+    this.temperature++;
+};

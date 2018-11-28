@@ -10,5 +10,11 @@ describe('Thermostat', function() {
             thermostat.changeDefaultTemperature(30);
             expect(thermostat.temperature).toEqual(30);
         });
+
+        it('Can increase temperature', function() {
+            thermostat.increaseTemperature();
+            expect(thermostat.temperature).toEqual(21);
+        });
+
     });
 });
