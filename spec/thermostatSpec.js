@@ -60,5 +60,32 @@ describe('Thermostat', function() {
             expect(thermostat.temperature).toEqual(20);
         });
 
+        it('Returns current energy to low usage when temperature is < 18', function () {
+            thermostat.decreaseTemperature();
+            thermostat.decreaseTemperature();
+            thermostat.decreaseTemperature();
+            expect(thermostat.energyUsage()).toEqual('Low Usage');
+
+        });
+
+        it('Returns current energy to medium usage when temperature is < 25', function () {
+            thermostat.increaseTemperature();
+            thermostat.increaseTemperature();
+            thermostat.increaseTemperature();
+            expect(thermostat.energyUsage()).toEqual('Medium Usage');
+
+        });
+
+        it('Returns current energy to High usage when temperature is > 25', function () {
+            thermostat.increaseTemperature();
+            thermostat.increaseTemperature();
+            thermostat.increaseTemperature();
+            thermostat.increaseTemperature();
+            thermostat.increaseTemperature();
+            thermostat.increaseTemperature();
+            expect(thermostat.energyUsage()).toEqual('High Usage');
+
+        });
+
     });
 });
