@@ -14,26 +14,6 @@
 
   </head>
   <body>
-    <script src="jquery.js"></script>
-    <script>
-
-        $( document ).ready(function() {
-            var thermostat = new Thermostat();
-            $('#temperature').text(thermostat.temperature);
-
-            $('#temp-up').on('click', function() { // event listener
-                thermostat.increaseTemperature(); // update model
-                $('#temperature').text(thermostat.temperature); // update view
-            });
-
-            $('#temp-down').on('click', function() { // event listener
-                thermostat.decreaseTemperature(); // update model
-                $('#temperature').text(thermostat.temperature); // update view
-            });
-
-        });
-
-    </script>
     <div class="container">
       <input id = "temp-up" type="submit" name="increaseTemperature" value="+">
       <input id = "temp-down" type="submit" name="decreaseTemperature" value="-">
@@ -41,7 +21,9 @@
       <input type="submit" name="resetTemperature" value="Reset Temperature">
       <input type="checkbox" checked data-toggle="toggle" name="Power Saving Switch">
     </div>
-
+    <script src="./jquery.js"></script>
+    <script src="./interface.js"></script>
+    <script src="src/thermostat.js"></script>
   </body>
-  <script src="src/thermostat.js"></script>
+
 </html>
