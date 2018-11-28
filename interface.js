@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     var thermostat = new Thermostat();
+    $('#power-saving').text('on');
     updateTemperature();
 
     $('#temp-up').on('click', function() { // event listener
