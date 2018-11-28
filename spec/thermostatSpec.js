@@ -25,5 +25,20 @@ describe('Thermostat', function() {
             thermostat.changeMinimumTemperature(15);
             expect(thermostat.minTemperature).toEqual(15);
         });
+
+        it('Can change the maximum temperature', function() {
+            thermostat.changeMaximumTemperature(30);
+            expect(thermostat.maxTemperature).toEqual(30);
+        });
+
+        it('Change maximum temperature to 32 when power saving is off', function () {
+            thermostat.setPowerSavingOff();
+            expect(thermostat.maxTemperature).toEqual(32);
+        });
+
+        it('Change isPowerSaving to false', function () {
+            thermostat.setPowerSavingOff();
+            expect(thermostat.isPowerSaving).toEqual(false);
+        });
     });
 });
