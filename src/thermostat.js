@@ -10,11 +10,15 @@ Thermostat.prototype.changeDefaultTemperature = function(temperature) {
 };
 
 Thermostat.prototype.increaseTemperature = function() {
-    this.temperature++;
+    if (this.temperature < this.maxTemperature) {
+        this.temperature++;
+    }
 };
 
 Thermostat.prototype.decreaseTemperature = function() {
-    this.temperature--;
+    if (this.temperature > this.minTemperature) {
+        this.temperature--;
+    }
 };
 
 Thermostat.prototype.changeMinimumTemperature = function(temperature) {

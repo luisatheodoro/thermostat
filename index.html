@@ -18,8 +18,10 @@
       <input id = "temp-up" type="submit" name="increaseTemperature" value="+">
       <input id = "temp-down" type="submit" name="decreaseTemperature" value="-">
       <h1 id="temperature"></h1>
-      <input type="submit" name="resetTemperature" value="Reset Temperature">
-      <input type="checkbox" checked data-toggle="toggle" name="Power Saving Switch">
+      <input id='temp-reset' type="submit" name="resetTemperature" value="Reset Temperature">
+      <input id="psm-on" type="submit" name="powerSavingOn" value="On">
+      <input id="psm-off" type="submit" name="powerSavingOff" value="Off">
+      <h1 id="power-saving"></h1>
     </div>
     <script src="./jquery.js"></script>
     <script src="./interface.js"></script>
@@ -27,3 +29,5 @@
   </body>
 
 </html>
+
+<!--<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled">-->
