@@ -20,5 +20,10 @@ describe('Thermostat', function() {
             thermostat.decreaseTemperature();
             expect(thermostat.temperature).toEqual(19);
         });
+
+        it('Can change the minimum temperature', function() {
+            thermostat.changeMinimumTemperature(15);
+            expect(thermostat.minTemperature).toEqual(15);
+        });
     });
 });
