@@ -29,6 +29,7 @@ Thermostat.prototype.changeMaximumTemperature = function(temperature) {
     this.maxTemperature = temperature;
 };
 
+
 Thermostat.prototype.setPowerSavingOff = function () {
   this.maxTemperature = 32;
   this.isPowerSaving = false;

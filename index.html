@@ -17,13 +17,26 @@
   </head>
   <body>
     <div class="container">
-      <input class="btn btn-danger" id= "temp-up" type="submit" name="increaseTemperature" value="+">
-      <input class="btn btn-primary" id= "temp-down" type="submit" name="decreaseTemperature" value="-">
-      <h1 id="temperature"></h1>
-      <input class="btn btn-warning" id='temp-reset' type="submit" name="resetTemperature" value="Reset Temperature">
-      <input class="btn btn-success" id="psm-on" type="submit" name="powerSavingOn" value="On">
-      <input class="btn btn-danger" id="psm-off" type="submit" name="powerSavingOff" value="Off">
-      <h1 id="power-saving"></h1>
+      <button class="btn btn-danger" id= "temp-up" type="submit" name="increaseTemperature">&#43;</button>
+      <span id="temperature"></span>
+      <button class="btn btn-primary" id= "temp-down" type="submit" name="decreaseTemperature">&#8722;</button>
+      <br>
+      <button class="btn btn-warning" id='temp-reset' type="submit" name="resetTemperature">Reset Temperature</button>
+      <br>
+      <label class="switch">
+        Power Save Mode
+        <input type="checkbox" checked data-toggle="toggle" data-on="On" data-off="Off" data-size="mini">
+        <span class="slider round"></span>
+      </label>
+      <br>
+      <section>
+        <h1>Current temperature: <span id="current-temperature">20</span></h1>
+        <select id="current-city">
+          <option value="london">London</option>
+          <option value="paris">Paris</option>
+          <option value="tokyo">Tokyo</option>
+        </select>
+      </section>
     </div>
     <script src="./jquery.js"></script>
     <script src="./interface.js"></script>
@@ -32,4 +45,3 @@
 
 </html>
 
-<!--<input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled">-->

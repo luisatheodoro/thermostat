@@ -1,7 +1,9 @@
 $( document ).ready(function() {
     var thermostat = new Thermostat();
     $('#power-saving').text('on');
+    displayWeather('London');
     updateTemperature();
+
 
     $('#temp-up').on('click', function() { // event listener
         thermostat.increaseTemperature(); // update model
@@ -30,6 +32,30 @@ $( document ).ready(function() {
         updateTemperature(); // update view
     });
 
+    $('.switch').on('click', function() { // event listener
+        if (thermostat.isPowerSaving === true) {
+            thermostat.setPowerSavingOff();
+            $('#power-saving').text('off');
+        }else{
+            thermostat.setPowerSavingOn();
+            $('#power-saving').text('on');
+        }
+        updateTemperature(); // update view
+    });
+
+    function displayWeather(city) {
+        var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
+        var token = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed';
+        var units = '&units=metric';
+        $.get(url + token + units, function (data) {
+            $('#current-temperature').text(data.main.temp);
+        })
+    }
+
+    $('#current-city').change(function() {
+        var city = $('#current-city').val();
+        displayWeather(city);
+    });
 
     function updateTemperature() {
       $('#temperature').text(thermostat.temperature);

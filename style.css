@@ -9,3 +9,9 @@
 .high-usage {
   color: red;
 }
+
+#temperature {
+  font-family: "Comic Sans MS";
+  font-size: 27px;
+}
+
