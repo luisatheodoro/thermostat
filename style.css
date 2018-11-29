@@ -10,8 +10,75 @@
   color: red;
 }
 
-#temperature {
-  font-family: "Comic Sans MS";
-  font-size: 27px;
+body {
+  background-color: #607886;
 }
 
+#header-name {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+}
+
+#temperature {
+  font-family: "Comic Sans MS";
+  font-size: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#temp-up {
+   top: 50%;
+   left: 50%;
+   background-color: #607886;
+   font-size: 30px;
+   border-color: #607886;
+ }
+
+#temp-down {
+  top: 50%;
+  left: 50%;
+  background-color: #607886;
+  font-size: 30px;
+  border-color: #607886;
+}
+
+#temp-reset {
+  margin-top: 20px;
+  font-size: 10px;
+  color: black;
+}
+
+#temp-text {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+#current-city {
+  text-align: center;
+  margin-left: 46%;
+}
+
+#temp-control {
+  margin-top: 30%;
+}
+
+.switch {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  margin-left: 43%;
+}
+/*body {*/
+  /*background-color: #607886;*/
+/*}*/
+
+.dot {
+  text-align: center;
+  height: 300px;
+  width: 300px;
+  background-color: #607886;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin-top: 70px;
+  margin-left: 35%;
+}

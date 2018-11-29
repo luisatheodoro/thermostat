@@ -5,6 +5,7 @@
     <title>Thermostat</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -16,12 +17,20 @@
 
   </head>
   <body>
+    <h1 id="header-name">ThermoStat</h1>
     <div class="container">
-      <button class="btn btn-danger" id= "temp-up" type="submit" name="increaseTemperature">&#43;</button>
-      <span id="temperature"></span>
-      <button class="btn btn-primary" id= "temp-down" type="submit" name="decreaseTemperature">&#8722;</button>
+      <div class="dot">
+        <div id="temp-control">
+          <input id= "temp-up" type="submit" value=&#43>
+          <span id="temperature"></span>
+          <input id= "temp-down" type="submit" value=&#8722>
+          <br>
+          <button class="btn btn-warning" id='temp-reset' type="submit" name="resetTemperature">Reset</button>
+          <!--<button class="btn btn-primary" id= "temp-down" type="submit" name="decreaseTemperature">&#8722;</button>-->
+        </div>
+      </div>
       <br>
-      <button class="btn btn-warning" id='temp-reset' type="submit" name="resetTemperature">Reset Temperature</button>
+      <!--<button class="btn btn-warning" id='temp-reset' type="submit" name="resetTemperature">Reset</button>-->
       <br>
       <label class="switch">
         Power Save Mode
@@ -30,7 +39,7 @@
       </label>
       <br>
       <section>
-        <h1>Current temperature: <span id="current-temperature">20</span></h1>
+        <h1 id="temp-text">Current temperature: <span id="current-temperature"></span></h1>
         <select id="current-city">
           <option value="london">London</option>
           <option value="paris">Paris</option>
